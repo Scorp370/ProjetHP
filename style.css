@@ -1,0 +1,101 @@
+
+body{
+    min-height: 100%;
+    font-family: "Festive", cursive;
+    background-image: url(img/blason1.jpeg);
+    background-position-x: center; 
+    background-attachment: fixed;
+  }
+  ul{
+      display:flex;
+      justify-content: space-around;
+  }
+  .img{
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+  }
+  .jkr{
+      grid-column: 2;
+      grid-row: 2;
+      height: 100px;
+      width: 100px;
+      
+  }
+  .jkr img{
+      border-radius: 1em;
+  }
+  .blasonm{
+      grid-column: 1;
+      grid-row: 1;
+      height: 100px;
+      width: 100px;
+      transition: 1s;
+  }
+  .blasonm:hover{
+      transform: scale(1.3);
+      z-index: 2;
+  }
+  .blasonm img{
+    border-radius: 1em;
+  } 
+
+  .buttom{
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+
+  .button:hover {
+  background: none;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+
+  
+  .blasonp{
+     grid-column: 3;
+     grid-row: 1; 
+     height: 100px;
+     width: 100px;
+  }
+  .blasonp img{
+      border-radius: 1em;
+  }
+  .blasonsd{
+     grid-column: 1;
+    grid-row: 3;
+    height: 100px;
+    width: 100px;
+  }
+  .blasonsd img{
+    border-radius: 1em;  
+  }
+  .blasonsp{
+     grid-column: 3;
+     grid-row: 3;
+     height: 100px;
+     width: 100px;
+  }
+  .blasonsp img{
+    border-radius: 1em; 
+  }
