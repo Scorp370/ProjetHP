@@ -2,9 +2,10 @@
 body{
     min-height: 100%;
     font-family: "Festive", cursive;
-    background-image: url(img/blason1.jpeg);
+    background-image: url(/img/hogwarts.jpg);
     background-position-x: center; 
     background-attachment: fixed;
+    /* background-repeat: no-repeat; */
   }
   ul{
       display:flex;
@@ -33,45 +34,71 @@ body{
       width: 100px;
       transition: 1s;
   }
-  .blasonm:hover{
+  /*.blasonm:hover{
       transform: scale(1.3);
-      z-index: 2;
-  }
+      z-index: 1;
+  }*/
   .blasonm img{
     border-radius: 1em;
   } 
-
-  .buttom{
-    cursor: pointer;
-    transition: all 0.3s ease-out;
+  .h2-griffondor {
+    color: goldenrod;
+  }
+  .p-griffondor {
+    color: darkred;
   }
 
-  .button:hover {
-  background: none;
+  .overlay, .overlay1 , .overlay2 , .overlay3{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba 0,0,0,0.7;
+    transition: opacity .4s;
+    visibility: hidden;
+    opacity: 0;
   }
-  .overlay:target {
+  
+  .overlay:target , .overlay1:target , .overlay2:target,  .overlay3:target{
     visibility: visible;
     opacity: 1;
-  }
-  .popup .close {
+}
+/*p {
+    color: red;
+}*/
+.popup , .popup1 , .popup2 , .popup3  {
+    margin: auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 5px;
+    width: 45%;
+    position: relative;
+    transition: all 0.4s ;
+}
+.popup .cross , .popup1 .cross1 , .popup2 .cross2 , .popup3 .cross3 {
     position: absolute;
-    top: 20px;
-    right: 30px;
-    transition: all 200ms;
-    font-size: 30px;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     text-decoration: none;
-    color: #333;
-  }
-  .popup .close:hover {
-    color: #06D85F;
-  }
-  .popup .content {
-    max-height: 30%;
-    overflow: auto;
-  }
+    transition: 0.3s ease;
+    color: #333;  
+}
+.popup .cross:hover {
+    color: goldenrod;
+}
 
-  
+.popup1 .cross1:hover {
+  color: yellow;
+}
+.popup2 .cross2:hover {
+  color: rgb(60, 55, 200);
+}
+.popup3 .cross3:hover {
+  color: rgb(148, 148, 146);
+}
   .blasonp{
      grid-column: 3;
      grid-row: 1; 
@@ -81,8 +108,15 @@ body{
   .blasonp img{
       border-radius: 1em;
   }
+  .h2-poufsouffle {
+    color: yellow;
+  }
+  .p-poufsouffle {
+color: rgb(67, 65, 65);
+  }
+  
   .blasonsd{
-     grid-column: 1;
+    grid-column: 1;
     grid-row: 3;
     height: 100px;
     width: 100px;
@@ -90,6 +124,14 @@ body{
   .blasonsd img{
     border-radius: 1em;  
   }
+
+  .h2-serdaigle {
+    color: rgb(60, 55, 200);
+  }
+  .p-serdaigle {
+color:#44b5d5;
+  }
+  
   .blasonsp{
      grid-column: 3;
      grid-row: 3;
@@ -99,3 +141,25 @@ body{
   .blasonsp img{
     border-radius: 1em; 
   }
+
+  .h2-serpentard {
+    color: rgb(148, 148, 146);
+  }
+  .p-serpentard {
+color: rgb(24, 117, 41);
+  }
+
+  #img {
+    float: left;
+  }
+
+  p {
+    font-size: 30px;
+    color: blanchedalmond;
+  }
+
+  p a {
+    color:yellowgreen;
+  }
+
+ 

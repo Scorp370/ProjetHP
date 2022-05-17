@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Jolly+Lodger" rel="stylesheet">
+    <link rel="stylesheet" href="stylecont.css" type="text/css">
+
+</head>
+<body>
+    <div id="hogwarts-background">
+        <div id="form-wrapper">
+            <form>
+                <label for="wizard-name">Your Name: </label>
+                <textarea  id="wizard-name" name="wizard-name" cols="20" rows="1"></textarea>
+                <br><br>
+            Etes vous un moldus?
+            <br>
+            <input type="radio" id="yes-muggle" name="muggle-parent" value="yes">
+            <label for="contactChoice1">Oui</label>
+           <br>
+            <input type="radio" id="no-muggle" name="muggle-parent" value="no">
+            <label for="contactChoice2">Non</label>
+            <br><br>
+            <div>
+            <label for="emailinput">Email</label>
+            <textarea id="emailinput" name="email" cols="28" rows="1"></textarea>
+            </div>
+            <br>
+            <div>
+            <textarea id="messageinput" name="message" cols="35" rows="4" placeholder="Votre message"></textarea>
+            </div>
+            <br>
+
+            Which is your favorite house at Hogwarts?
+            <br>
+            <select name="fav-house">
+              <option value="Gryffindor">Gryffindor</option>
+              <option value="Hufflepuff">Hufflepuff</option>
+              <option value="Ravenclaw">Ravenclaw</option>
+              <option value="Slytherin">Slytherin</option>
+            </select>
+            <br></br>
+
+            <div class="submit">        
+                <a href="#popup"><input type="submit" value="Submit"></a>
+              </div>
+
+              <div id="popup" class="overlay"></div>
+
+
+            <!--<input type="submit" value="Submit">-->
+
+              </form>
+        </div>
+    </div> 
+
+    
+
+</body>
+</html>
