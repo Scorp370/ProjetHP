@@ -48,6 +48,10 @@ body{
     color: darkred;
   }
 
+
+/* popup blasons */
+
+
   .overlay, .overlay1 , .overlay2 , .overlay3{
     position: fixed;
     top: 0;
@@ -142,6 +146,88 @@ color:#44b5d5;
     border-radius: 1em; 
   }
 
+
+  /* cartes pivotantes */
+
+.flip-card {
+  background-color: transparent;
+  width: 280px;
+  height: 200px;
+  /*border: 1px solid #f1f1f1;*/
+  perspective: 1000px; 
+  display: flex;
+  justify-content: center;
+  /* align-items: center;*/
+  margin-top: 35px;
+  /* margin-right: 100px; */
+} 
+
+.flip-card-inner {
+  position: relative;
+  /*width: 100%;
+  height: 100%;*/
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
+
+/* .flip-card-front {
+  background-color: #bbb;
+  color: black;
+} */
+
+.flip-card-back {
+  /* background-color: dodgerblue; */
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.eleves {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.flip-card-back p {
+  color: blanchedalmond;
+  width: auto;
+}
+
+.flip-card-front a {
+  color: #fff;
+}
+
+.professeurs{
+display: flex;
+flex-direction: column;
+grid-column: 3;
+
+}
+
+img {
+  border-radius: 20px;
+  border: 2px solid #fff;
+}
+
+/* fin de carte pivotante */
+
   .h2-serpentard {
     color: rgb(148, 148, 146);
   }
@@ -149,12 +235,14 @@ color:#44b5d5;
 color: rgb(24, 117, 41);
   }
 
+/* image jkr biographie */
+
   #img {
     float: left;
   }
 
   p {
-    font-size: 30px;
+    /* font-size: 30px; */
     color: blanchedalmond;
   }
 

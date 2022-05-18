@@ -43,19 +43,40 @@
               <option value="Slytherin">Slytherin</option>
             </select>
             <br></br>
+            
+            <div><input id="sub" type="submit" value="Submit"></div>
 
-            <div class="submit">        
+            <!-- <div class="submit">        
                 <a href="#popup"><input type="submit" value="Submit"></a>
               </div>
 
-              <div id="popup" class="overlay"></div>
+              <div id="popup" class="overlay"></div> -->
 
 
             <!--<input type="submit" value="Submit">-->
 
               </form>
+              <div class="gif">
+                <img
+                    src="https://img.buzzfeed.com/buzzfeed-static/static/2017-09/3/12/asset/buzzfeed-prod-web-05/anigif_sub-buzz-6825-1504456908-1.gif">
+                </div>
+
         </div>
     </div> 
+
+    <script>
+
+    const myGif = document.querySelector(".gif");
+    const Submit = document.getElementById("sub");
+    Submit.addEventListener("click", (e) => {
+      e.preventDefault()
+      myGif.style.visibility = "visible";
+      setTimeout(function () {
+        myGif.style.visibility = "hidden";
+      }, 2000);
+    }
+    );
+  </script>
 
     
 
