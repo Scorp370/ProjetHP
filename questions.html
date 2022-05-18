@@ -8,39 +8,54 @@
     <title>Document</title>
 </head>
 <body>
-         <p>Question1: "En quelle année est née J.K.Rowling?"<br>
-       
-         <input type="radio" name="Question1">1964<br>
-         <input type="radio" name="Question1" id="correct1">1965<br>
-         <input type="radio" name="Question1">1966<br>
-         <input type="radio" name="Question1">1967<br>
+
+    <ul>
+
+        <li><a href="index.html" title="Accueil">Accueil</a></li>
+        <li><a href="personnages.html" title="Personnaged">Personnages</a></li>
+        <li><a href="biographie.html" title="Biographie JKR">Biographie JKR</a></li>
+        <li><a href="questions.html" title="Questions">Questions</a></li>
+        <li><a href="contact.html" title="Contact">Contact</a></li>
+      </ul>
+
+      <div id="questions">
+
+          <p>Question1: "En quelle année est née J.K.Rowling?"<br>
+            
+            <input type="radio" name="Question1">1964<br>
+            <input type="radio" name="Question1" id="correct1">1965<br>
+            <input type="radio" name="Question1">1966<br>
+            <input type="radio" name="Question1">1967<br>
         </p>
-
-
-         <p>Question2: "Kathleen était le prénom de ...?"<br>       
-         <input type="radio" name="Question2">Sa Tante<br>
-         <input type="radio" name="Question2">Sa mère<br>
-         <input type="radio" name="Question2" id="correct2">Sa Grand-Mère<br>
-         <input type="radio" name="Question2">Sa Soeur<br>
+        
+        
+        <p>Question2: "Kathleen était le prénom de ...?"<br>       
+            <input type="radio" name="Question2">Sa Tante<br>
+            <input type="radio" name="Question2">Sa mère<br>
+            <input type="radio" name="Question2" id="correct2">Sa Grand-Mère<br>
+            <input type="radio" name="Question2">Sa Soeur<br>
         </p>
-
-
-         <p>Question3: "En combien de langues le livres a t'il été traduit?"<br>      
-         <input type="radio" name="Question3">60<br>
-         <input type="radio" name="Question3">70<br>
-         <input type="radio" name="Question3" id="correct3">80<br>
-         <input type="radio" name="Question3">90<br>
+        
+        
+        <p>Question3: "En combien de langues le livres a t'il été traduit?"<br>      
+            <input type="radio" name="Question3">60<br>
+            <input type="radio" name="Question3">70<br>
+            <input type="radio" name="Question3" id="correct3">80<br>
+            <input type="radio" name="Question3">90<br>
         </p>
-
-
-         <input id="sub" type="submit" value="submit" onclick="result()">
-
-
-    <img src="" alt="" class="correctAnswer">
-</body>
-</html>
-
+        
+        
+        <input id="sub" type="submit" value="submit" onclick="result()">
+        
+        
+        <img src="" alt="" class="correctAnswer">
+    </div>
+    </body>
+    </html>
+    
 <script>
+
+// Questionnaire
 
     function result(){
 
@@ -63,6 +78,25 @@
             imgGif = "https://img.wattpad.com/a65341935db3ccb076d0d62d254bb7dd65ab2386/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f47556e506c3236527638304279773d3d2d3434343035333231322e313464333637376466666263373264373938303636383733303030342e676966?s=fit&w=720&h=720";
         } else {
             imgGif = "https://c.tenor.com/zVsoLH3HoQcAAAAC/applaudissement-clap.gif";
+    //  const img = document.createElement("img");
+    //  img.src = "https://c.tenor.com/zVsoLH3HoQcAAAAC/applaudissement-clap.gif";
+    
+    //  const myGyf = document.querySelector("#questions");
+    // const sub = document.querySelector("#sub");
+    
+    // submit.addEventListener("click", (e) => {
+    //   e.preventDefault()
+    //  myGyf.innerHTML = " Bravo tu es un vrai sorcier !!";
+    //  myGyf.appendChild(img);
+   
+    //   myGyf.style.visibility = "visible";
+    //   setTimeout(function () {
+    //     myGyf.style.visibility = "hidden";
+    //     window.location.href = './index.html'
+    //   }, 2000);
+    // });
+
+        
         }
         // document.querySelector(".correctAnswer").src = "";
         document.querySelector(".correctAnswer").src = imgGif;
@@ -78,48 +112,51 @@
       }, 4000);
     }
     );
-// test 1
 
-// const questions = [
-//     {
-//         question1: "En quelle année est née J.K.Rowling ?",
-//         reponse:"1965"
-//         fausseReponse: [
-        // "1964" , "1966",
-//         ]
-//     }; 
+// affichage image si reponse fausses
+    
+    //  const img = document.createElement("img");
+    //  img.src = "https://img.wattpad.com/a65341935db3ccb076d0d62d254bb7dd65ab2386/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f47556e506c3236527638304279773d3d2d3434343035333231322e313464333637376466666263373264373938303636383733303030342e676966?s=fit&w=720&h=720";
+    
+    //  const myGifi = document.querySelector("#questions");
+    // const submit = document.querySelector("#sub");
+    
+    // submit.addEventListener("click", (e) => {
+    //   e.preventDefault()
+    //  myGifi.innerHTML = " reesai de nouveau";
+    //  myGifi.appendChild(img);
+   
+    //   myGifi.style.visibility = "visible";
+    //   setTimeout(function () {
+    //     myGifi.style.visibility = "hidden";
+    //     window.location.href = './questions.html'
+    //   }, 4000);
+    // });
 
-//     {
-//         question2:"Kathleen était le prénom de ...",
-//         reponse:"Sa Grand-Mère"
-//         fausseReponse: [
-        //    "Sa Tante","Sa Mère",
-//         ]
-//     };
+// affichage image de reussite
 
-//     {
-//         question3:"En combien de langues le livres a t'il été traduit?",
-//         reponse:"80"
-//         fausseReponse:[
-        // "60" , "70", "91",
-//         ]
-//     };
+    // const img = document.createElement("img");
+    //  img.src = "https://c.tenor.com/zVsoLH3HoQcAAAAC/applaudissement-clap.gif";
+    
+    //  const myGyf = document.querySelector("#questions");
+    // const sub = document.querySelector("#sub");
+    
+    // submit.addEventListener("click", (e) => {
+    //   e.preventDefault()
+    //  myGyf.innerHTML = " Bravo tu es un vrai sorcier !!";
+    //  myGyf.appendChild(img);
+   
+    //   myGyf.style.visibility = "visible";
+    //   setTimeout(function () {
+    //     myGyf.style.visibility = "hidden";
+    //     window.location.href = './index.html'
+    //   }, 2000);
+    // });
 
-//     {
-//         question4:
-//         reponse:
-//         fausseReponse:[
-        
-//         ]
-//     };
+  </script>
 
-//     {
-//         question5:
-//         reponse:
-//         fausseReponse:[
-        
-//         ]
-//     };
-// ]
 
-</script>
+
+
+    
+

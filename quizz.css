@@ -1,10 +1,36 @@
 
-body{
-background-image:url(/img/hogwarts.jpg); ;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-p{
+body{
+min-height: 100%;
+    font-family: "Festive", cursive;
+    background-image: url(./img/hogwarts.jpg);
+    background-position-x: center; 
+    background-attachment: fixed;
+    background-size: contain;
+
+}
+
+ul{
+  display:flex;
+  justify-content: space-around;
+  list-style-type: none
+}
+ul a{
+color: blanchedalmond;
+font-size: 0.8rem; 
+}
+
+#questions p{
   color: aliceblue;
+  margin-top: 2rem;
+  /* font-family: 'Jolly Lodger'; */
+  font-family: 'Macondo', cursive;
+  font-size: 15px;
 }
 
 

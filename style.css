@@ -1,8 +1,14 @@
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body{
-    min-height: 100%;
+    height: 100vh;
     font-family: "Festive", cursive;
     background-image: url(./img/hogwarts.jpg);
+    background-size: contain;
+    background-repeat: initial;
     background-position-x: center; 
     background-attachment: fixed;
     /* background-repeat: no-repeat; */
@@ -10,16 +16,20 @@ body{
   ul{
       display:flex;
       justify-content: space-around;
-      /* color: blanchedalmond; */
+      list-style-type: none
   }
   ul a{
     color: blanchedalmond;
+    font-size: 0.8rem;
   }
   .img{
-
+      margin-top: 2rem;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(3, 1fr);
+  }
+  .center-card{
+    justify-self: center;
   }
   .jkr{
       grid-column: 2;
@@ -38,10 +48,7 @@ body{
       width: 100px;
       transition: 1s;
   }
-  /*.blasonm:hover{
-      transform: scale(1.3);
-      z-index: 1;
-  }*/
+  
   .blasonm img{
     border-radius: 1em;
   } 
@@ -72,23 +79,23 @@ body{
     visibility: visible;
     opacity: 1;
 }
-/*p {
-    color: red;
-}*/
+
 .popup , .popup1 , .popup2 , .popup3  {
     margin: auto;
-    padding: 2rem;
+    padding: 0.5rem;
     background: #fff;
     border-radius: 5px;
-    width: 45%;
+    width: 90%;
     position: relative;
     transition: all 0.4s ;
+    top: 50%;
+    transform: translate(0, -50%);
 }
 .popup .cross , .popup1 .cross1 , .popup2 .cross2 , .popup3 .cross3 {
     position: absolute;
-    top: 1rem;
+    top: 0.25rem;
     right: 1.5rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
     transition: 0.3s ease;
@@ -152,17 +159,22 @@ color:#44b5d5;
 
 
   /* cartes pivotantes */
+ 
+  /* .container a {
+    display: flex;
+  justify-content: center;
+    color: #fff;
+    
+  } */
 
 .flip-card {
   background-color: transparent;
-  width: 280px;
   height: 200px;
   /*border: 1px solid #f1f1f1;*/
-  perspective: 1000px; 
   display: flex;
-  justify-content: center;
+
   /* align-items: center;*/
-  margin-top: 35px;
+  margin-top: 2rem;
   /* margin-right: 100px; */
 } 
 
@@ -207,6 +219,7 @@ color:#44b5d5;
 .card {
   display: grid;
   grid-template-columns: repeat(3,1fr);
+  margin-top: 2rem;
 }
 
 .flip-card-back p {
@@ -225,9 +238,12 @@ grid-column: 3;
 
 }
 
-.professeurs .name a {
+.container a {
   color:blanchedalmond ;
-  text-align: end;
+  vertical-align: text-top;
+  display: flex;
+  justify-content: center;
+  
 }
 
 img {
@@ -248,15 +264,28 @@ color: rgb(24, 117, 41);
 
   #img {
     float: left;
+    height: 150px;
+    width: 150px;
+    height: 8rem;
+    width: 8rem;
+    margin: 1rem
   }
 
   p {
     /* font-size: 30px; */
     color: blanchedalmond;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-align: justify;
+    padding: 0 1rem;
   }
 
   p a {
     color:yellowgreen;
   }
 
+ @media (max-width: 768px){
+
+ }
+   
  

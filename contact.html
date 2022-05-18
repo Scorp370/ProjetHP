@@ -10,39 +10,54 @@
 
 </head>
 <body>
+
+  <ul>
+
+    <li><a href="index.html" title="Accueil">Accueil</a></li>
+    <li><a href="personnages.html" title="Personnaged">Personnages</a></li>
+    <li><a href="biographie.html" title="Biographie JKR">Biographie JKR</a></li>
+    <li><a href="questions.html" title="Questions">Questions</a></li>
+    <li><a href="contact.html" title="Contact">Contact</a></li>
+  </ul>
+
     <div id="hogwarts-background">
         <div id="form-wrapper">
             <form>
+              <div class="label">
                 <label for="wizard-name">Your Name: </label>
-                <textarea  id="wizard-name" name="wizard-name" cols="20" rows="1"></textarea>
-                <br><br>
-            Etes vous un moldus?
-            <br>
+                <input  id="wizard-name" name="wizard-name" cols="20" rows="1"></input>
+              </div>
+             <div class="label">   
+            <p>Etes vous un moldus?</p>
+            <div>
             <input type="radio" id="yes-muggle" name="muggle-parent" value="yes">
             <label for="contactChoice1">Oui</label>
-           <br>
+          </div>
+           <div>
             <input type="radio" id="no-muggle" name="muggle-parent" value="no">
             <label for="contactChoice2">Non</label>
-            <br><br>
-            <div>
+          </div>
+          </div>
+            
+            <div class="label">
             <label for="emailinput">Email</label>
-            <textarea id="emailinput" name="email" cols="28" rows="1"></textarea>
+            <input type="email" id="emailinput" name="email" cols="28" rows="1"></input>
             </div>
-            <br>
-            <div>
+            
+            <div class="label">
             <textarea id="messageinput" name="message" cols="35" rows="4" placeholder="Votre message"></textarea>
-            </div>
-            <br>
-
-            Which is your favorite house at Hogwarts?
-            <br>
+          </div>
+            
+            <div class="label">
+            <p>Which is your favorite house at Hogwarts?</p>
+            
             <select name="fav-house">
               <option value="Gryffindor">Gryffindor</option>
               <option value="Hufflepuff">Hufflepuff</option>
               <option value="Ravenclaw">Ravenclaw</option>
               <option value="Slytherin">Slytherin</option>
             </select>
-            <br></br>
+          </div>
             
             <div><input id="sub" type="submit" value="Submit"></div>
 
@@ -73,15 +88,15 @@
     
     submit.addEventListener("click", (e) => {
       e.preventDefault()
-     myGif.innerHTML = "V,nkx:kld,sml";
+     myGif.innerHTML = " Merci pour ces renseignements!! ";
      myGif.appendChild(img);
+   
+      myGif.style.visibility = "visible";
+      setTimeout(function () {
+        myGif.style.visibility = "hidden";
+        window.location.href = './contact.html'
+      }, 2000);
     });
-    //   myGif.style.visibility = "visible";
-    //   setTimeout(function () {
-    //     myGif.style.visibility = "hidden";
-    //   }, 2000);
-    // }
-    // );
   </script>
 
     
