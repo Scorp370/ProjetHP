@@ -56,26 +56,32 @@
             <!--<input type="submit" value="Submit">-->
 
               </form>
-              <div class="gif">
+              <!-- <div class="gif">
                 <img
                     src="https://img.buzzfeed.com/buzzfeed-static/static/2017-09/3/12/asset/buzzfeed-prod-web-05/anigif_sub-buzz-6825-1504456908-1.gif">
-                </div>
+                </div> -->
 
         </div>
     </div> 
 
     <script>
-
-    const myGif = document.querySelector(".gif");
-    const Submit = document.getElementById("sub");
-    Submit.addEventListener("click", (e) => {
+     const img = document.createElement("img");
+     img.src = "https://img.buzzfeed.com/buzzfeed-static/static/2017-09/3/12/asset/buzzfeed-prod-web-05/anigif_sub-buzz-6825-1504456908-1.gif";
+    
+     const myGif = document.querySelector("#hogwarts-background");
+    const submit = document.querySelector("#sub");
+    
+    submit.addEventListener("click", (e) => {
       e.preventDefault()
-      myGif.style.visibility = "visible";
-      setTimeout(function () {
-        myGif.style.visibility = "hidden";
-      }, 2000);
-    }
-    );
+     myGif.innerHTML = "V,nkx:kld,sml";
+     myGif.appendChild(img);
+    });
+    //   myGif.style.visibility = "visible";
+    //   setTimeout(function () {
+    //     myGif.style.visibility = "hidden";
+    //   }, 2000);
+    // }
+    // );
   </script>
 
     

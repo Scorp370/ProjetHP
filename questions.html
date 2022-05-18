@@ -8,25 +8,84 @@
     <title>Document</title>
 </head>
 <body>
-    
-<div class="quiz-container">
-  <div id="quiz"></div>
-</div>
-<button id="previous">Previous Question</button>
-<button id="next">Next Question</button>
-<button id="submit">Submit Quiz</button>
-<div id="results"></div>
+         <p>Question1: "En quelle année est née J.K.Rowling?"<br>
+       
+         <input type="radio" name="Question1">1964<br>
+         <input type="radio" name="Question1" id="correct1">1965<br>
+         <input type="radio" name="Question1">1966<br>
+         <input type="radio" name="Question1">1967<br>
+        </p>
+
+
+         <p>Question2: "Kathleen était le prénom de ...?"<br>       
+         <input type="radio" name="Question2">Sa Tante<br>
+         <input type="radio" name="Question2">Sa mère<br>
+         <input type="radio" name="Question2" id="correct2">Sa Grand-Mère<br>
+         <input type="radio" name="Question2">Sa Soeur<br>
+        </p>
+
+
+         <p>Question3: "En combien de langues le livres a t'il été traduit?"<br>      
+         <input type="radio" name="Question3">60<br>
+         <input type="radio" name="Question3">70<br>
+         <input type="radio" name="Question3" id="correct3">80<br>
+         <input type="radio" name="Question3">90<br>
+        </p>
+
+
+         <input id="sub" type="submit" value="submit" onclick="result()">
+
+
+    <img src="" alt="" class="correctAnswer">
 </body>
 </html>
 
 <script>
+
+    function result(){
+
+        let score=0;
+        let imgGif;
+        if (document.getElementById("correct1").checked){
+        
+            score++;
+        }
+
+        if (document.getElementById("correct2").checked){
+            score++;
+        }
+
+        if (document.getElementById("correct3").checked){
+            score++;
+        }
+        // alert("your score is:"+score);
+        if (score < 3){
+            imgGif = "https://img.wattpad.com/a65341935db3ccb076d0d62d254bb7dd65ab2386/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f47556e506c3236527638304279773d3d2d3434343035333231322e313464333637376466666263373264373938303636383733303030342e676966?s=fit&w=720&h=720";
+        } else {
+            imgGif = "https://c.tenor.com/zVsoLH3HoQcAAAAC/applaudissement-clap.gif";
+        }
+        // document.querySelector(".correctAnswer").src = "";
+        document.querySelector(".correctAnswer").src = imgGif;
+    }
+
+    const myGif = document.querySelector(".correctAnswer");
+    const Submit = document.getElementById("sub");
+    Submit.addEventListener("click", (e) => {
+      e.preventDefault()
+      myGif.style.visibility = "visible";
+      setTimeout(function () {
+        myGif.style.visibility = "hidden";
+      }, 4000);
+    }
+    );
+// test 1
 
 // const questions = [
 //     {
 //         question1: "En quelle année est née J.K.Rowling ?",
 //         reponse:"1965"
 //         fausseReponse: [
-        "1964" , "1966",
+        // "1964" , "1966",
 //         ]
 //     }; 
 
@@ -34,7 +93,7 @@
 //         question2:"Kathleen était le prénom de ...",
 //         reponse:"Sa Grand-Mère"
 //         fausseReponse: [
-           "Sa Tante","Sa Mère",
+        //    "Sa Tante","Sa Mère",
 //         ]
 //     };
 
@@ -42,7 +101,7 @@
 //         question3:"En combien de langues le livres a t'il été traduit?",
 //         reponse:"80"
 //         fausseReponse:[
-        "60" , "70", "91",
+        // "60" , "70", "91",
 //         ]
 //     };
 
@@ -62,160 +121,5 @@
 //         ]
 //     };
 // ]
-(function(){
-  // Functions
-  function buildQuiz(){
-    // variable to store the HTML output
-    const output = [];
-
-    // for each question...
-    myQuestions.forEach(
-      (currentQuestion, questionNumber) => {
-
-        // variable to store the list of possible answers
-        const answers = [];
-
-        // and for each available answer...
-        for(letter in currentQuestion.answers){
-
-          // ...add an HTML radio button
-          answers.push(
-            `<label>
-              <input type="radio" name="question${questionNumber}" value="${letter}">
-              ${letter} :
-              ${currentQuestion.answers[letter]}
-            </label>`
-          );
-        }
-
-        // add this question and its answers to the output
-        output.push(
-          `<div class="slide">
-            <div class="question"> ${currentQuestion.question} </div>
-            <div class="answers"> ${answers.join("")} </div>
-          </div>`
-        );
-      }
-    );
-
-    // finally combine our output list into one string of HTML and put it on the page
-    quizContainer.innerHTML = output.join('');
-  }
-
-  function showResults(){
-
-    // gather answer containers from our quiz
-    const answerContainers = quizContainer.querySelectorAll('.answers');
-
-    // keep track of user's answers
-    let numCorrect = 0;
-
-    // for each question...
-    myQuestions.forEach( (currentQuestion, questionNumber) => {
-
-      // find selected answer
-      const answerContainer = answerContainers[questionNumber];
-      const selector = `input[name=question${questionNumber}]:checked`;
-      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-
-      // if answer is correct
-      if(userAnswer === currentQuestion.correctAnswer){
-        // add to the number of correct answers
-        numCorrect++;
-
-        // color the answers green
-        answerContainers[questionNumber].style.color = 'lightgreen';
-      }
-      // if answer is wrong or blank
-      else{
-        // color the answers red
-        answerContainers[questionNumber].style.color = 'red';
-      }
-    });
-
-    // show number of correct answers out of total
-    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
-  }
-
-  function showSlide(n) {
-    slides[currentSlide].classList.remove('active-slide');
-    slides[n].classList.add('active-slide');
-    currentSlide = n;
-    if(currentSlide === 0){
-      previousButton.style.display = 'none';
-    }
-    else{
-      previousButton.style.display = 'inline-block';
-    }
-    if(currentSlide === slides.length-1){
-      nextButton.style.display = 'none';
-      submitButton.style.display = 'inline-block';
-    }
-    else{
-      nextButton.style.display = 'inline-block';
-      submitButton.style.display = 'none';
-    }
-  }
-
-  function showNextSlide() {
-    showSlide(currentSlide + 1);
-  }
-
-  function showPreviousSlide() {
-    showSlide(currentSlide - 1);
-  }
-
-  // Variables
-  const quizContainer = document.getElementById('quiz');
-  const resultsContainer = document.getElementById('results');
-  const submitButton = document.getElementById('submit');
-  const myQuestions = [
-    {
-      question: "En quelle année est née J.K.Rowling?",
-      answers: {
-        a: "1964",
-        b: "1965",
-        c: "1966"
-      },
-      correctAnswer: "b"
-    },
-    {
-      question: "Kathleen était le prénom de ?",
-      answers: {
-        a: "Sa Tante",
-        b: "Sa Mère",
-        c: "Sa Grand-Mère"
-      },
-      correctAnswer: "c"
-    },
-    {
-      question: "En combien de langues le livres a t'il été traduit?",
-      answers: {
-        a: "60",
-        b: "70",
-        c: "80",
-        d: "90"
-      },
-      correctAnswer: "c"
-    }
-  ];
-
-  // Kick things off
-  buildQuiz();
-
-  // Pagination
-  const previousButton = document.getElementById("previous");
-  const nextButton = document.getElementById("next");
-  const slides = document.querySelectorAll(".slide");
-  let currentSlide = 0;
-
-  // Show the first slide
-  showSlide(currentSlide);
-
-  // Event listeners
-  submitButton.addEventListener('click', showResults);
-  previousButton.addEventListener("click", showPreviousSlide);
-  nextButton.addEventListener("click", showNextSlide);
-})();
 
 </script>
