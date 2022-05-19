@@ -94,3 +94,11 @@ ul a{
     right: 0;
     background: rgba 0, 0, 0, 0.7
   }
+
+  @media (min-width: 768px){
+    
+    #hogwarts-background{
+      margin-top: 20px;
+    }
+  }
+    
