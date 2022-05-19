@@ -22,6 +22,8 @@ if (score != 3) {
     
     myGifi.innerHTML = " Essai de nouveau";
     myGifi.style.color = "aliceblue";
+    myGifi.style.fontSize = "30px";
+    myGifi.style.textAlign = "center";
     myGifi.appendChild(img);
   setTimeout(function () {
       window.location.href = "./questions.html";
@@ -31,6 +33,8 @@ if (score != 3) {
     
     myGifi.innerHTML = "Bravo";
     myGifi.style.color = "aliceblue";
+    myGifi.style.fontSize = "30px";
+    myGifi.style.textAlign = "center";
     myGifi.appendChild(img);
     setTimeout(function () {
         window.location.href = "./questions.html";

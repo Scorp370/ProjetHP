@@ -41,6 +41,7 @@ ul a{
     gap: 30px;
     color: #fff;
     
+    
   }
   #form-wrapper{
     width:90%;
@@ -48,6 +49,7 @@ ul a{
     min-height: 500px;
     margin: auto;
     background-color: rgba(0,0,0,0.6)
+    
   }
   #form-wrapper  form{
     color: white;
@@ -77,15 +79,6 @@ ul a{
     font-family: 'Jolly Lodger';
   }
 
-  /* Gif Voldemort */
-  /* .gif{
-    position: absolute;
-    top: 30%;
-    right: 30%;
-    bottom: 30%;
-    left: 30%;
-    visibility: hidden;
-  } */
   .sub{
     position: fixed;
     top: 0;
@@ -93,7 +86,10 @@ ul a{
     left: 0;
     right: 0;
     background: rgba 0, 0, 0, 0.7
-  }
+    
+    }
+
+    
 
   @media (min-width: 768px){
     

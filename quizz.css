@@ -1,52 +1,52 @@
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-min-height: 100vh;
-    font-family: "Festive", cursive;
-    background-image: url(./img/hogwarts.jpg);
-    background-position-x: center; 
-    background-attachment: fixed;
-    background-size: cover;
-   
-
+body {
+  min-height: 100vh;
+  font-family: "Festive", cursive;
+  background-image: url(./img/hogwarts.jpg);
+  background-position-x: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-ul{
-  display:flex;
+ul {
+  display: flex;
   justify-content: space-around;
-  list-style-type: none
+  list-style-type: none;
 }
-ul a{
-color: blanchedalmond;
-font-size: 0.8rem; 
+ul a {
+  color: blanchedalmond;
+  font-size: 0.8rem;
 }
 
-#questions p{
+#questions{
+  display: flex;
+  flex-direction: column;
+}
+
+#questions p {
   color: aliceblue;
   margin-top: 2rem;
-  font-family: 'Jolly Lodger';
+  font-family: "Jolly Lodger";
   /* font-family: 'Macondo', cursive; */
   font-size: 15px;
+  margin-left: 2rem;
 }
 
-@media (min-width: 768px){
-
-  #questions p{
-
+#sub{
+  margin-left: 2rem;
+  width: 100px;
 }
-} 
 
-
-
-
-
-
-
+@media (min-width: 768px) {
+  #questions p {
+    /* padding: 2rem; */
+  }
+}
 
 /* body{
 	font-size: 20px;
@@ -113,4 +113,4 @@ button:hover{
   position: relative;
   height: 200px;
   margin-top: 40px;
-} */ 
+} */
