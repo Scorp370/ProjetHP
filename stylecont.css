@@ -7,7 +7,7 @@
 
 html, body{
   background-image: url("./img/hogwarts.jpg");
-  background-size: contain;
+  background-size: cover;
     height: 100%;
     margin:0px
   }
