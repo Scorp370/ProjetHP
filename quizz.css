@@ -43,10 +43,10 @@ ul a {
 }
 
 @media (min-width: 768px) {
-  #questions p {
+  /* #questions p { */
     /* padding: 2rem; */
   }
-}
+
 
 /* body{
 	font-size: 20px;

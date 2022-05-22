@@ -18,5 +18,5 @@ const img = document.createElement("img");
       setTimeout(function () {
         myGif.style.visibility = "hidden";
         window.location.href = './contact.html'
-      }, 2000);
+      }, 4000);
     });
